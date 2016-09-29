@@ -54,8 +54,8 @@ cnoreabbrev <expr> X (getcmdtype() is# ':' && getcmdline() is# 'X') ? 'x' : 'X'
 
 call plug#begin()
 
+Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'scrooloose/syntastic'
-Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-dispatch'
@@ -74,7 +74,7 @@ call plug#end()
 
 "<-- PLUGIN LIST ENDS HERE -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-->
 
-colorscheme solarized
+colorscheme Tomorrow-Night
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -86,7 +86,7 @@ let g:NERDTreeWinSize=40
 let g:NERDTreeShowBookmarks = 1
 
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'jellybeans',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
