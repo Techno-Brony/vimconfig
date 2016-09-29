@@ -113,6 +113,6 @@ let g:lightline = {
       \ }
 
 let g:SuperTabDefaultCompletionType = "<c-n>"
-let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 
 map <C-p> :Files<CR>
