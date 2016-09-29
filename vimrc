@@ -15,11 +15,6 @@ imap <right> <nop>
 
 filetype indent on
 
-inoremap { {<CR>}<Esc>O<TAB>
-inoremap ( ()<Esc>:let leavechar=")"<CR>i
-inoremap [ []<Esc>:let leavechar="]"<CR>i
-imap <C-j> <Esc>:exec "normal f" . leavechar<CR>a
-
 set autoindent
 set expandtab
 set softtabstop=4
@@ -77,6 +72,7 @@ Plug 'ervandew/supertab'
 Plug 'shougo/neocomplete.vim'
 Plug 'rip-rip/clang_complete'
 Plug 'rkulla/pydiction'
+Plug 'raimondi/delimitmate'
 
 "<-- SYNTAX HIGHLIGHTING PLUGINS START HERE /-/-/-/-/-/-/-/-/-/-->
 Plug 'octol/vim-cpp-enhanced-highlight'
