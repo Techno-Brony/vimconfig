@@ -15,6 +15,12 @@ imap <right> <nop>
 
 filetype indent on
 
+inoremap { {<CR>}<Esc>O<TAB>
+inoremap ( ()<Esc>:let leavechar=")"<CR>i
+inoremap [ []<Esc>:let leavechar="]"<CR>i
+imap <C-j> <Esc>:exec "normal f" . leavechar<CR>a
+
+set autoindent
 set expandtab
 set softtabstop=4
 set tabstop=4
