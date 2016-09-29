@@ -71,11 +71,16 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
+
+"<-- AUTOCOMPLETION PLUGINS START HERE /-/-/-/-/-/-/-/-/-/-/-/-->
 Plug 'ervandew/supertab'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'shougo/neocomplete.vim'
+Plug 'rip-rip/clang_complete'
+Plug 'rkulla/pydiction'
 
 "<-- SYNTAX HIGHLIGHTING PLUGINS START HERE /-/-/-/-/-/-/-/-/-/-->
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'hdima/python-syntax'
 
 call plug#end()
 
@@ -112,8 +117,16 @@ let g:lightline = {
       \ },
       \ }
 
+"<-- NEOCOMPLETE STUFF HERE -->
 let g:SuperTabDefaultCompletionType = "<c-n>"
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:clang_library_path = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib"
+if !exists('g:neocomplete#force_omni_input_patterns')
+     let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:pydiction_location = '~/.vim/plugged/pydiction/complete-dict'
+"<-- NEOCOMPLETE STUFF ENDS HERE -->
 
 map <C-p> :Files<CR>
 
