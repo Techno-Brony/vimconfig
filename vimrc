@@ -25,11 +25,14 @@ set shiftwidth=4
 ino jk <esc>
 vno v <esc>
 nnoremap ; :
-set number
+set relativenumber
 set showcmd
 syntax enable
 
 "<-- ESSENTIAL STUFF END HERE -->
+
+autocmd InsertEnter * :set number | :set norelativenumber
+autocmd InsertLeave * :set relativenumber | :set nonumber
 
 let mapleader = ","
 set backspace=2
@@ -65,7 +68,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'joonty/vim-do'
 
 "<-- AUTOCOMPLETION PLUGINS START HERE /-/-/-/-/-/-/-/-/-/-/-/-->
 Plug 'ervandew/supertab'
